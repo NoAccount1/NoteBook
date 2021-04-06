@@ -1,0 +1,43 @@
+/* The theme of this app */
+$primary: rgba(0, 140, 255);
+$p: $primary;
+
+$secondary: rgb(255, 51, 0);
+$s: $secondary;
+
+$background: rgba(255, 255, 255);
+$bg: $background;
+
+
+$on-primary: rgba(255, 255, 255);
+$on-p: $on-primary;
+
+$on-secondary: rgba(255, 255, 255);
+$on-s: $on-secondary;
+
+$on-background: rgba(0, 0, 0);
+$on-bg: $on-background;
+
+html {
+  color: $on-bg;
+  background-color: $bg
+}
+@mixin color($bgColor) {
+  @if $bgColor {
+    @if $bgColor == $primary{
+      color: $on-primary;
+    } @else if $bgColor == $secondary {
+      color: $on-secondary;
+    } @else if $bgColor == $background {
+      color: $on-background;
+    }
+  } @else {
+    @if background-color == $primary {
+      color: $on-primary;
+    } @else if background-color == $secondary {
+      color: $on-secondary;
+    } @else if background-color == $background {
+      color: $on-background;
+    }
+  }
+}

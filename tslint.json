@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "variable-name": false,
     "align": {
       "options": [
         "parameters",
@@ -104,13 +105,13 @@
         }
       ]
     },
-    "variable-name": {
+    "variable-name": false/* {
       "options": [
         "ban-keywords",
         "check-format",
         "allow-pascal-case"
       ]
-    },
+    } */,
     "whitespace": {
       "options": [
         "check-branch",

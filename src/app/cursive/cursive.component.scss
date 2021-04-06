@@ -1,0 +1,26 @@
+@import '../../theme';
+
+* {
+  color: $on-bg;
+  background-color: $bg;
+}
+[card] {
+  $bg-color: rgb(167, 214, 255);
+  text-align: center;
+  width: 300px;
+  background-color: $bg-color;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  * {
+    width: 300px;
+    background-color: $bg-color;
+  }
+  h1 {
+    font-size: large;
+  }
+  h2 {
+    font-size: medium;
+    color: gray;
+  }
+}

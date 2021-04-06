@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@mdi/font/scss/materialdesignicons';
+@import './theme';
+
+html {
+  background-color: $bg;
+  color: $on-bg;
+  @include color($p);
+}
+span[separator] {
+  flex: 1 1 auto;
+}
