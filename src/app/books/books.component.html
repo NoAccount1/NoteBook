@@ -1,0 +1,8 @@
+<div card *ngFor="let item of typeDetect()">
+  <a [routerLink]="['./', item.id.author, item.id.book]" routerLinkActive="router-link-active">
+    <img src="{{item.img}}">
+    <h1>{{item.name}}</h1>
+    <h2>{{item.author}}</h2>
+    <p summary>{{item.summary}}</p>
+  </a>
+</div>

@@ -1,13 +1,21 @@
 <header>
-  <nav>
-    <a class=title routerLink="/">Carnet de lecteur</a>
+  <nav fxLayout="row" fxLayoutAlign="space-between center">
+    <div><a class="icon" routerLink="/"><i class="mdi mdi-home"></i></a></div>
 
-    <span separator></span>
+    <div style="display: inline-block;">
+      <a class="item" routerLink="/books/personals" routerLinkActive="active">Analyses</a>
+      <a class="item" routerLink="/books/cursives" routerLinkActive="active">Lectures</a>
+    </div>
 
-    <a class=item routerLink="/cursives" routerLinkActive="active"><i class="mdi mdi-school"></i> Lectures cursives</a>
-    <a class=item routerLink="/personals" routerLinkActive="active"><i class="mdi mdi-account"></i> Lectures personnelles</a>
+    <div><a class="icon" routerLink="/about" routerLinkActive="active"><i class="mdi mdi-account"></i></a></div>
   </nav>
 </header>
 
-
 <router-outlet></router-outlet>
+<!--
+ fxLayoutAlign="start center"
+ fxLayoutAlign="center center"
+ fxLayoutAlign="end center"
+ fxLayoutAlign="center center"
+ fxLayoutAlign="center center"
+ -->

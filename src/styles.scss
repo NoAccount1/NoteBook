@@ -3,9 +3,15 @@
 @import './theme';
 
 html {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: $bg;
   color: $on-bg;
   @include color($p);
+
+}
+html body {
+  margin: 0;
+  padding: 0;
 }
 span[separator] {
   flex: 1 1 auto;

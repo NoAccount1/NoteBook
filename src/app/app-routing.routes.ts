@@ -4,17 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 /* All components used in this project */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './common/home/home.component';
-import { CursiveComponent } from './cursive/cursive.component';
-import { PersonalsComponent } from './personals/personals.component';
+import { BooksComponent } from './books/books.component';
+import { BookComponent } from './books/book/book.component';
+import { ErrorComponent } from './common/error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'cursives', component: CursiveComponent },
-  { path: 'cursives/:author', component: CursiveComponent },
-  { path: 'cursives/:author/:book', component: CursiveComponent },
-  { path: 'personals', component: PersonalsComponent },
-  { path: 'personals/:author', component: PersonalsComponent },
-  { path: 'personals/:author/:book', component: PersonalsComponent },
+  { path: 'books/:type', component: BooksComponent },
+  { path: 'books/:type/:author', component: BooksComponent },
+  { path: 'books/:type/:author/:book', component: BookComponent },
+  { path: '**', component: ErrorComponent }
+  // { path: 'personals', component: BooksComponent },
+  // { path: 'personals/:author', component: BooksComponent },
+  // { path: 'personals/:author/:book', component: BookComponent },
 ];
 
 @NgModule({

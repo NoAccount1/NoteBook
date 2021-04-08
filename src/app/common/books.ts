@@ -4,7 +4,10 @@ export interface Book {
   name: string;
   shortName?: string;
   img: string;
-  id: string;
+  id: {
+    author: string;
+    book: string;
+  };
   author: string;
   shortAuthor?: string;
   summary: string;
@@ -36,7 +39,10 @@ const BOOKS: { [key: string]: Book[] } = {
     {
       name: 'Le caractère de la bruyère',
       img: 'assets/covers/bruyere-delerm.png',
-      id: 'delerm/caractere-bruyere',
+      id: {
+        author: 'delerm',
+        book: 'caractere-bruyere'
+      },
       author: 'Philipe Delerm',
       summary: `« Terre de bruyère. Elle a donné son nom au sol qui la conçoit. C\'est dire de quel prestige est habité la fleur éponyme, pourtant si simple, couvre sol de lande et de forèt. On en cueille un brin frèle. Les clochettes lilliputiennes ont le rose-mauve d\'une fraîcheur à l\'avance passée mélancolique, un trait de rouille infime sur les bords. Un signe, une histoire d\'amour, un souvenir d\'automne. »`,
       content: ''
@@ -44,7 +50,10 @@ const BOOKS: { [key: string]: Book[] } = {
     {
       name: 'Dom Juan ou le Festin de Pierre',
       img: 'assets/covers/dj-moliere.png',
-      id: 'moliere/dom-juan',
+      id: {
+        author: 'moliere',
+        book: 'dom-juan'
+      },
       author: 'Molière',
       summary: ``,
       content: ''
@@ -55,7 +64,10 @@ const BOOKS: { [key: string]: Book[] } = {
       shortName: 'Le seigneur des Anneaux',
       name: 'Le seigneur des anneaux - Livre 1 : La communauté de l\'anneau',
       img: 'asstets/covers/communaute-anneau-jrr-tolkien.png',
-      id: 'tolkien/communaute-de-l-anneau',
+      id: {
+        author: 'tolkien',
+        book: 'communaute-de-l-anneau'
+      },
       author: 'John Ronald Reuel Tolkien',
       shortAuthor: 'J.R.R Tolkien',
       summary: '',
@@ -91,6 +103,6 @@ export class DocumentationItems {
 
   getItemById(id: string, section: string): Book | undefined {
     const sectionLookup = section === 'cursives' ? 'cursives' : 'personnelles';
-    return ALL_BOOKS.find(doc => doc.id === id && doc.section === sectionLookup);
+    return ALL_BOOKS.find(doc => doc.id.book === id && doc.section === sectionLookup);
   }
 }

@@ -1,24 +1,24 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingRoutes } from './app-routing.routes';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './common/home/home.component';
-import { CursiveComponent } from './cursive/cursive.component';
-import { PersonalsComponent } from './personals/personals.component';
-import { ItemComponent } from './common/item/item.component';
+import { BooksComponent } from './books/books.component';
+import { BookComponent } from './books/book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CursiveComponent,
-    PersonalsComponent,
-    ItemComponent
+    BooksComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingRoutes
+    AppRoutingRoutes,
+    FlexLayoutModule
   ],
   providers: [
     Title

@@ -15,7 +15,7 @@
     "arrow-return-shorthand": true,
     "curly": true,
     "deprecation": {
-      "severity": "warning"
+      "severity": "off"
     },
     "eofline": true,
     "import-blacklist": [
@@ -105,13 +105,6 @@
         }
       ]
     },
-    "variable-name": false/* {
-      "options": [
-        "ban-keywords",
-        "check-format",
-        "allow-pascal-case"
-      ]
-    } */,
     "whitespace": {
       "options": [
         "check-branch",

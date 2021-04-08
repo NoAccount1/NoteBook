@@ -1,33 +1,32 @@
 @import '../theme';
 
-header nav {
-  span[separator] {
-    flex: 1 1 auto;
-  }
+nav {
   background-color: $p;
-  border-radius: 5px;
-  padding: 15px 5px;
-  a {
-    /* Layout */
-    border-radius: 5px;
-    border: none;
+  padding: 15px;
+  width: 100%;
+  // display: flex;
 
-    padding: 10px;
-    margin: 10px;
-    /* Appearance */
-    background-color: darken($p, 5);
-    color: $on-p;
+  a {
+    margin: 0 auto;
     text-decoration: none;
+    color: $on-p;
+    background-color: $p;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    // display: flex;
     &:hover {
       background-color: darken($p, 10);
     }
-    &.title {
-      padding: 10px;
+    &.icon {
+      width: 53px;
+      height: 53px;
       margin: 10px 5px;
+      font-size: 30px;
     }
+
     &.item {
-      vertical-align: bottom;
-      padding: 5px;
+      margin: 10px
     }
   }
 }
