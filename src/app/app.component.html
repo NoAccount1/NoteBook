@@ -1,21 +1,24 @@
-<header>
-  <nav fxLayout="row" fxLayoutAlign="space-between center">
-    <div><a class="icon" routerLink="/"><i class="mdi mdi-home"></i></a></div>
-
-    <div style="display: inline-block;">
-      <a class="item" routerLink="/books/personals" routerLinkActive="active">Analyses</a>
-      <a class="item" routerLink="/books/cursives" routerLinkActive="active">Lectures</a>
+<mat-toolbar color="primary" fx>
+  <mat-toolbar-row>
+    <a mat-button routerLink="/"><i class="mdi mdi-home mdi-24px"></i> Accueil</a>
+    <span spacer></span>
+    <div fxShow.gt-sm fxHide.lt-sm>
+      <a routerLink="/books" mat-button>Lectures</a>
+      <a routerLink="/" mat-button>Analyses</a>
     </div>
-
-    <div><a class="icon" routerLink="/about" routerLinkActive="active"><i class="mdi mdi-account"></i></a></div>
-  </nav>
-</header>
+    <span spacer></span>
+    <a mat-button routerLink="/">À propos <i class="mdi mdi-account mdi-24px"></i></a>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxShow.lt-sm fxHide.gt-sm>
+    <span spacer></span>
+    <a routerLink="/books" mat-button>Lectures</a>
+    <a routerLink="/" mat-button>Analyses</a>
+    <span spacer></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- <mat-tab-group mat-align-tabs="center" backgroundColor="primary" fxShow.lt-sm fxHide.gt-sm>
+  <mat-tab label="Lectures"></mat-tab>
+  <mat-tab label="Analyses"></mat-tab>
+</mat-tab-group> -->
 
 <router-outlet></router-outlet>
-<!--
- fxLayoutAlign="start center"
- fxLayoutAlign="center center"
- fxLayoutAlign="end center"
- fxLayoutAlign="center center"
- fxLayoutAlign="center center"
- -->

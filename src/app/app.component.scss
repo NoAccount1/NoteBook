@@ -1,4 +1,11 @@
-@import '../theme';
+mat-toolbar-row{
+  margin: 0;
+  a[mat-button] {
+    margin: 0;
+  }
+}
+
+/* @import '../theme';
 
 nav {
   background-color: $p;
@@ -18,15 +25,16 @@ nav {
     &:hover {
       background-color: darken($p, 10);
     }
-    &.icon {
-      width: 53px;
-      height: 53px;
-      margin: 10px 5px;
-      font-size: 30px;
-    }
+
 
     &.item {
       margin: 10px
     }
   }
 }
+.icon {
+  border-radius: 50%;
+  margin: 10px 0;
+  padding: 8.5px 10px;
+  font-size: 30px;
+} */

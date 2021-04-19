@@ -10,6 +10,7 @@ import { ErrorComponent } from './common/error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'books', component: BooksComponent },
   { path: 'books/:type', component: BooksComponent },
   { path: 'books/:type/:author', component: BooksComponent },
   { path: 'books/:type/:author/:book', component: BookComponent },
