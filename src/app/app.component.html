@@ -1,15 +1,16 @@
 <mat-toolbar color="primary" fx>
-  <mat-toolbar-row>
-    <a mat-button routerLink="/"><i class="mdi mdi-home mdi-24px"></i> Accueil</a>
+  <mat-toolbar-row class="first">
+    <a mat-button routerLink="/"><i class="mdi mdi-book-open-variant mdi-24px"></i> Accueil</a>
     <span spacer></span>
-    <div fxShow.gt-sm fxHide.lt-sm>
+    <div fxShow.gt-xs fxHide.lt-sm>
       <a routerLink="/books" mat-button>Lectures</a>
       <a routerLink="/" mat-button>Analyses</a>
     </div>
     <span spacer></span>
-    <a mat-button routerLink="/">À propos <i class="mdi mdi-account mdi-24px"></i></a>
+    <a mat-icon-button routerLink="/"><i class="mdi mdi-github mdi-24px"></i></a>
+    <a mat-icon-button routerLink="/"><i class="mdi mdi-account mdi-24px"></i></a>
   </mat-toolbar-row>
-  <mat-toolbar-row fxShow.lt-sm fxHide.gt-sm>
+  <mat-toolbar-row class="second" fxShow.lt-sm fxHide.gt-xs>
     <span spacer></span>
     <a routerLink="/books" mat-button>Lectures</a>
     <a routerLink="/" mat-button>Analyses</a>

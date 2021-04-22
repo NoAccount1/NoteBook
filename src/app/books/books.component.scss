@@ -6,6 +6,7 @@
 }
 [card] {
   $bg-color: rgb(167, 214, 255);
+  text-decoration: none;
   text-align: center;
   width: 300px;
   background-color: $bg-color;
@@ -14,8 +15,13 @@
   margin: 10px;
   float: left;
   * {
+    text-decoration: none;
     width: 300px;
     background-color: $bg-color;
+    margin-bottom: 0;
+  }
+  img {
+    width: 250px;
   }
   h1 {
     font-size: large;

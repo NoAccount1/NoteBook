@@ -1,18 +1,33 @@
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Cursives">
+
     <h1>Lectures cursives</h1>
-    <div card *ngFor="let item of typeDetect()">
-      <a [routerLink]="['./', item.id.author, item.id.book]" routerLinkActive="router-link-active">
-        <img src="{{item.img}}">
+
+    <div smDevices card *ngFor="let item of typeDetect()">
+      <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
         <h1>{{item.name}}</h1>
+        <img src="{{item.img}}">
         <h2>{{item.author}}</h2>
         <p summary>{{item.summary}}</p>
       </a>
     </div>
+
+    <div lgDevices card *ngFor="let item of typeDetect()">
+      <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
+        <h1>{{item.name}}</h1>
+        <img src="{{item.img}}">
+        <h2>{{item.author}}</h2>
+        <p summary>{{item.summary}}</p>
+      </a>
+    </div>
+
   </mat-tab>
 
+
   <mat-tab label="Personnelles">
+
     <h1>Lectures personnelles</h1>
+
   </mat-tab>
 </mat-tab-group>
 

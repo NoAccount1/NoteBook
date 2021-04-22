@@ -1,8 +1,14 @@
-mat-toolbar-row{
+mat-toolbar-row.first {
   margin: 0;
+  padding: 8px 16px;
   a[mat-button] {
     margin: 0;
   }
+}
+
+mat-toolbar-row.second {
+  padding: 0;
+  height: 36px;
 }
 
 /* @import '../theme';
