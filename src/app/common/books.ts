@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Book {
   name: string;
   shortName?: string;
-  img: string;
+  img?: string;
   id: {
     section?: string;
     author: string;
@@ -22,6 +22,7 @@ export interface Section {
 
 const CURSIVES = 'cursives';
 const PERSONALS = 'personals';
+
 export const SECTIONS: { [key: string]: Section } = {
   [CURSIVES]: {
     name: 'Lectures cursives',
@@ -44,12 +45,12 @@ const BOOKS: { [key: string]: Book[] } = {
         book: 'caractere-bruyere'
       },
       author: 'Philipe Delerm',
-      summary: `« Terre de bruyère. Elle a donné son nom au sol qui la conçoit. C\'est dire de quel prestige est habité la fleur éponyme, pourtant si simple, couvre sol de lande et de forèt. On en cueille un brin frèle. Les clochettes lilliputiennes ont le rose-mauve d\'une fraîcheur à l\'avance passée mélancolique, un trait de rouille infime sur les bords. Un signe, une histoire d\'amour, un souvenir d\'automne. »`,
+      summary: `« Terre de bruyère. Elle a donné son nom au sol qui la conçoit. C'est dire de quel prestige est habité la fleur éponyme, pourtant si simple, couvre sol de lande et de forèt. On en cueille un brin frèle. Les clochettes lilliputiennes ont le rose-mauve d'une fraîcheur à l'avance passée mélancolique, un trait de rouille infime sur les bords. Un signe, une histoire d'amour, un souvenir d'automne. »`,
       content: ''
     },
     {
       name: 'Dom Juan ou le Festin de Pierre',
-      img: 'assets/covers/dj-moliere.png',
+      // img: 'assets/covers/dj-moliere.png',
       id: {
         author: 'moliere',
         book: 'dom-juan'
@@ -76,14 +77,15 @@ const BOOKS: { [key: string]: Book[] } = {
   ]
 };
 
-for (const doc of BOOKS[CURSIVES]) {
-  doc.id.section = 'cursives';
+for (const book of BOOKS[CURSIVES]) {
+  book.id.section = 'cursives';
 }
 
-for (const doc of BOOKS[PERSONALS]) {
-  doc.id.section = 'personals';
+for (const book of BOOKS[PERSONALS]) {
+  book.id.section = 'personals';
 }
 
+export const BOOKS_RAW = BOOKS;
 export const ALL_CURSIVES = BOOKS[CURSIVES];
 export const ALL_PERSONALS = BOOKS[PERSONALS];
 export const ALL_BOOKS = ALL_CURSIVES.concat(ALL_PERSONALS);

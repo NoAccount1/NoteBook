@@ -1,22 +1,16 @@
+<button mat-icon-button (click)="switchStyle()" aria-label="Change view"><mat-icon>menu</mat-icon></button>
+
 <mat-tab-group mat-align-tabs="center">
+
   <mat-tab label="Cursives">
 
-    <h1>Lectures cursives</h1>
-
-    <div smDevices card *ngFor="let item of typeDetect()">
+    <div card *ngFor="let item of books.cursives">
       <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
         <h1>{{item.name}}</h1>
-        <img src="{{item.img}}">
-        <h2>{{item.author}}</h2>
-        <p summary>{{item.summary}}</p>
-      </a>
-    </div>
-
-    <div lgDevices card *ngFor="let item of typeDetect()">
-      <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
-        <h1>{{item.name}}</h1>
-        <img src="{{item.img}}">
-        <h2>{{item.author}}</h2>
+        <img class="cover" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
+        <a class="author-name" mat-button routerLink="/author/{{item.id.author}}">
+          <h2>{{item.author}}</h2>
+        </a>
         <p summary>{{item.summary}}</p>
       </a>
     </div>
@@ -26,7 +20,16 @@
 
   <mat-tab label="Personnelles">
 
-    <h1>Lectures personnelles</h1>
+    <div card *ngFor="let item of books.personals">
+      <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
+        <h1>{{item.name}}</h1>
+        <img class="cover" src="{{item.img}}">
+        <a class="author-name" mat-button routerLink="/author/{{item.id.author}}">
+          <h2>{{item.author}}</h2>
+        </a>
+        <p summary>{{item.summary}}</p>
+      </a>
+    </div>
 
   </mat-tab>
 </mat-tab-group>
