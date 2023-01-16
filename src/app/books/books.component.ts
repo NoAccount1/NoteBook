@@ -21,7 +21,7 @@ export class BooksComponent implements OnInit {
 
   style = 'card';
   switchStyle = () => {
-    this.style = this.style == 'card' ? 'tiles' : 'card';
+    this.style = this.style == 'card' ? 'tile' : 'card';
   }
 
   ngOnInit(): void {

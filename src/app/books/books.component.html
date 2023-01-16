@@ -4,10 +4,22 @@
 
   <mat-tab label="Cursives">
 
-    <div card *ngFor="let item of books['cursives']">
-      <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
+    <div class="card" *ngFor="let item of books['cursives']">
+
+      <!-- Card style -->
+      <a *ngIf="style == 'card'" [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
         <h1>{{item.name}}</h1>
-        <img class="cover" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
+        <img class="cover large" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
+        <a class="author-name" mat-button routerLink="/author/{{item.id.author}}">
+          <h2>{{item.author}}</h2>
+        </a>
+        <p summary>{{item.summary}}</p>
+      </a>
+
+      <!-- Tile style -->
+      <a *ngIf="style == 'tile'" [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
+        <img class="cover small" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
+        <h1>{{item.name}}</h1>
         <a class="author-name" mat-button routerLink="/author/{{item.id.author}}">
           <h2>{{item.author}}</h2>
         </a>
