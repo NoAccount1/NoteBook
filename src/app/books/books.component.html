@@ -4,7 +4,7 @@
 
   <mat-tab label="Cursives">
 
-    <div card *ngFor="let item of books.cursives">
+    <div card *ngFor="let item of books['cursives']">
       <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
         <h1>{{item.name}}</h1>
         <img class="cover" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
@@ -20,7 +20,7 @@
 
   <mat-tab label="Personnelles">
 
-    <div card *ngFor="let item of books.personals">
+    <div card *ngFor="let item of books['personals']">
       <a [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
         <h1>{{item.name}}</h1>
         <img class="cover" src="{{item.img}}">
