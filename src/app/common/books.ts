@@ -58,6 +58,16 @@ const BOOKS: { [key: string]: Book[] } = {
       author: 'Molière',
       summary: ``,
       content: ''
+    },
+    {
+      name: 'Test #1',
+      id: {
+        author: 'test-author',
+        book: 'test-book'
+      },
+      author: 'Test Author',
+      summary: ``,
+      content: ''
     }
   ],
   [PERSONALS]: [
