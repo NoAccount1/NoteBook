@@ -1,4 +1,6 @@
-<button mat-icon-button (click)="switchStyle()" aria-label="Change view"><mat-icon>menu</mat-icon></button>
+<button mat-fab color="accent" (click)="switchStyle()" matTooltip="Changer de vue" [matTooltipShowDelay]="1000">
+  <mat-icon>menu</mat-icon>
+</button>
 
 <mat-tab-group mat-align-tabs="center">
 
@@ -11,7 +13,7 @@
         <a class="card" *ngIf="style == 'card'" [routerLink]="['/books', item.id.section, item.id.author, item.id.book]" routerLinkActive="">
           <h1>{{item.name}}</h1>
           <img class="cover large" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
-          <a class="author-name" mat-button color="accent" routerLink="/author/{{item.id.author}}">
+          <a mat-button class="author-name" color="accent" routerLink="/author/{{item.id.author}}">
             <h2>{{item.author}}</h2>
           </a>
           <p class="summary large">{{item.summary}}</p>
@@ -22,7 +24,7 @@
           <img class="cover small" src="{{item.img ? item.img : 'assets/covers/placeholder.jpg'}}">
           <div class="tile-content">
             <h1>{{item.name}}</h1>
-            <a class="author-name" mat-button color="accent" routerLink="/author/{{item.id.author}}">
+            <a mat-button class="author-name" color="accent" routerLink="/author/{{item.id.author}}">
               <h2>{{item.author}}</h2>
             </a>
             <p class="summary small">{{item.summary}}</p>

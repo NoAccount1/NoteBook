@@ -19,7 +19,7 @@ export class BooksComponent implements OnInit {
 
   books = BOOKS_RAW;
 
-  style = 'card';
+  style = 'tile';
   switchStyle = () => {
     this.style = this.style == 'card' ? 'tile' : 'card';
   }
